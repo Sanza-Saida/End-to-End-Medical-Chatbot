@@ -1,4 +1,3 @@
-```yaml
 name: Deploy Application Docker Image to EC2 instance
 
 on:
@@ -73,4 +72,3 @@ jobs:
             -e OPENAI_API_KEY="${{ secrets.OPENAI_API_KEY }}" \
             -p 8080:8080 \
             "${{ steps.login-ecr.outputs.registry }}/${{ secrets.ECR_REPO }}:latest"
-```
